@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{148FBB17-83AB-4380-B16F-172CC75FF450}</ProjectGuid>
+    <ProjectGuid>{F39919C0-D709-43A7-92A8-EE984B220383}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WaveTech.KillSwitch.Model</RootNamespace>
-    <AssemblyName>WaveTech.KillSwitch.Model</AssemblyName>
+    <RootNamespace>WaveTech.KillSwitch.Providers.Hashing</RootNamespace>
+    <AssemblyName>WaveTech.KillSwitch.Providers.Hashing</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,20 +43,16 @@
     <Compile Include="..\..\Common\AssemblyInfo.cs">
       <Link>AssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="EncryptionInfo.cs" />
-    <Compile Include="Interfaces\Providers\IHashingProvider.cs" />
-    <Compile Include="Interfaces\Providers\IObjectSerializationProvider.cs" />
-    <Compile Include="Interfaces\Providers\ISymmetricEncryptionProvider.cs" />
-    <Compile Include="Interfaces\Providers\IWebServicesProvider.cs" />
-    <Compile Include="Interfaces\Services\IDeleteService.cs" />
-    <Compile Include="MasterConfiguration.cs" />
-    <Compile Include="Results\DirectorySecureDeleteResult.cs" />
-    <Compile Include="Results\FileSecureDeleteResult.cs" />
-    <Compile Include="SwitchTypes.cs" />
-    <Compile Include="Wipe.cs" />
+    <Compile Include="HashingProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\WaveTech.KillSwitch.Model\WaveTech.KillSwitch.Model.csproj">
+      <Project>{148FBB17-83AB-4380-B16F-172CC75FF450}</Project>
+      <Name>WaveTech.KillSwitch.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
